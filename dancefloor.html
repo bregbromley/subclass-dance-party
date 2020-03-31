@@ -2,15 +2,23 @@
 <html>
   <head>
     <title>Object Dance Party</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
+    <script src="src/spinDancer.js"></script>
+    <script src="src/heartBeatDancer.js"></script>
+    <script>
+          $( ".heartBeat" ).prepend( "Test" );
+    </script>
   </head>
   <body>
     <div class="topbar">
       <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>    </div>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
+      <a href="#" class="addSpinDancerButton" data-dancer-maker-function-name="makeSpinDancer">add a spin dancer</a>
+      <a href="#" class="addHeartBeatDancerButton" data-dancer-maker-function-name="makeHeartBeatDancer">add a heartbeat dancer</a>
+    </div>
     <script src="src/init.js"></script>
   </body>
 </html>
