@@ -15,15 +15,35 @@ $(document).ready(function() {
      * A new object of the given type will be created and added
      * to the stage.
      */
-    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
+    /* `this` -> The DOM element with class="addDancerButton"
+
+      `data-* attribute`
+      jQuery.data( element )
+        element
+        Type: Element
+        The DOM element to query for the data.
+
+      window[dancerMakerFunctionName]
+    */
+    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+    console.log(this);
+
+    /* Calling .data() with no parameters returns a JavaScript object containing each stored value as a property.
+       The object can be used directly to get data values (but note that property names originally containing dashes
+       will have been modified as described below) */
+    console.log($(this).data());
+
+    console.log(dancerMakerFunctionName);
+    console.log(window[dancerMakerFunctionName]);
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
+
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
-      $("body").height() * Math.random(),
+    var dancer = new dancerMakerFunction(
+      $("body").height() * Math.random(), // .height() returns the current computed unit-less height value
       $("body").width() * Math.random(),
       Math.random() * 1000
     );

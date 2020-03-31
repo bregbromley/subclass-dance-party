@@ -45,7 +45,6 @@ makeBlinkyDancer.prototype.constructor = makeDancer;
 
 makeBlinkyDancer.prototype.step = function() {
   makeDancer.prototype.step.call(this);
-  console.log('blinkyDancer ran');
   this.$node.toggle();
 };
 

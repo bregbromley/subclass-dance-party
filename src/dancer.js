@@ -73,7 +73,6 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 };
 
 makeDancer.prototype.step = function() {
-  console.log('makeDancer ran');
   var that = this;
   var func = function() {
     that.step();
