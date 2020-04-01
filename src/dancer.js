@@ -90,3 +90,9 @@ makeDancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
+
+makeDancer.prototype.lineUp = function() {
+  for (var i = 0; i < window.dancers.length; i++) {
+    console.log(window.dancers[i]);
+  }
+};

@@ -47,7 +47,7 @@ $(document).ready(function() {
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
-    console.log(dancer.$node);
+    window.dancers.push(dancer.$node);
     $('body').append(dancer.$node);
   });
 
@@ -67,7 +67,8 @@ $(document).ready(function() {
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
-    console.log(dancer.$node);
+    // console.log(dancer.$node);
+    window.dancers.push(dancer.$node);
     $('body').append(dancer.$node);
   });
 
@@ -85,10 +86,42 @@ $(document).ready(function() {
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
-    console.log(dancer.$node);
+    // console.log(dancer.$node);
+    window.dancers.push(dancer.$node);
     $('body').append(dancer.$node);
   });
 
+  $('.lineUpButton').on('click', function(event) {
+    console.log(window.dancers);
+    var someVal = 70;
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].addClass('lineUp');
+      console.log(window.dancers[i]);
+      var style = {
+        float: 'left',
+        left: 75
+      };
+      someVal += 40;
+      window.dancers[i].css(style);
+    }
+
+    // var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+
+    // var dancerMakerFunction = window[dancerMakerFunctionName];
+
+    // var dancer = new dancerMakerFunction(
+    //   $('body').height() * Math.random(),
+    //   $('body').width() * Math.random(),
+    //   Math.random() * 1000
+    // );
+    // // console.log(dancer.$node);
+    // window.dancers.push(dancer.$node);
+    // $('body').append(dancer.$node);
+  });
+
+  $(document).on('click', function(event) {
+    console.log(event.target.classlist);
+  });
 
 });
 
