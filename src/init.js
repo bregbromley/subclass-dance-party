@@ -43,8 +43,8 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(), // .height() returns the current computed unit-less height value
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(), // .height() returns the current computed unit-less height value
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
     console.log(dancer.$node);
@@ -63,8 +63,8 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
     console.log(dancer.$node);
@@ -81,11 +81,11 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
-      console.log(dancer.$node);
+    console.log(dancer.$node);
     $('body').append(dancer.$node);
   });
 

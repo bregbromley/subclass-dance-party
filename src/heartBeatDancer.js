@@ -12,9 +12,3 @@ makeHeartBeatDancer.prototype.step = function() {
   makeDancer.prototype.step.call(this);
 
 };
-
-// var ran = false;
-// if (!ran) {
-//   ran = true;
-//   $( ".heartBeat" ).prepend( "Test" );
-// }
