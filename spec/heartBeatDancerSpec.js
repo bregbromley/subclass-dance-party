@@ -1,14 +1,6 @@
-describe('blinkyDancer', function() {
+describe('heartBeatDancer', function() {
 
-  var blinkyDancer, clock;
-  var timeBetweenSteps = 1000;
-
-  beforeEach(function() {
-    clock = sinon.useFakeTimers();
-    blinkyDancer = new BlinkyDancer(10, 20, timeBetweenSteps);
-  });
-
-  it('should ', function() {
+  it('should have a function ', function() {
     expect().to.be.an.instanceof();
   });
 
@@ -17,14 +9,4 @@ describe('blinkyDancer', function() {
     expect().to.be.true;
   });
 
-  describe('dance', function() {
-    it('should ', function() {
-      sinon.spy(blinkyDancer, 'step');
-      expect().to.be.equal();
-
-      expect().to.be.equal();
-
-      expect().to.be.equal();
-    });
-  });
 });
