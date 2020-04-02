@@ -2,17 +2,17 @@
 
 
 
-var makeSpinDancer = function(top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps);
+var SpinDancer = function(top, left, timeBetweenSteps) {
+  Dancer.call(this, top, left, timeBetweenSteps);
 
 };
 
-makeSpinDancer.prototype = Object.create(makeDancer.prototype);
-makeSpinDancer.prototype.constructor = makeDancer;
+SpinDancer.prototype = Object.create(Dancer.prototype);
+SpinDancer.prototype.constructor = SpinDancer;
 
 
-makeSpinDancer.prototype.step = function() {
-  makeDancer.prototype.step.call(this);
+SpinDancer.prototype.step = function() {
+  Dancer.prototype.step.call(this);
   // this.$node.toggle();
 
   // this.$node.removeClass('dancer');

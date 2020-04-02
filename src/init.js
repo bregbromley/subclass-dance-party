@@ -91,36 +91,55 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
   });
 
+  $('.addScardyDancerButton').on('click', function(event) {
+
+    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+
+    var dancerMakerFunction = window[dancerMakerFunctionName];
+
+    var dancer = new dancerMakerFunction(
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
+      Math.random() * 1000
+    );
+    // console.log(dancer.$node);
+    window.dancers.push(dancer.$node);
+    $('body').append(dancer.$node);
+  });
+
+  //something to try
   $('.lineUpButton').on('click', function(event) {
-    console.log(window.dancers);
-    var someVal = 70;
-    for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i].addClass('lineUp');
-      console.log(window.dancers[i]);
-      var style = {
-        float: 'left',
-        left: 75
-      };
-      someVal += 40;
-      window.dancers[i].css(style);
-    }
+    $('.dancer').animate({
+      left: '200px',
+      // height: 'toggle'
+    }, 2000);
+  });
+  //end of something to try
+  $(document).on('click', '.dancer', function(event) {
+    $(this).addClass('one');
+    var next = $(this).closest('.dancer');
+    console.log(this.nextChild);
+    next.addClass( 'one' );
+    $('.one').animate({
+      left: '400px',
+      // height: 'toggle'
+    }, 2000);
+    $(this).removeClass('one');
+    next.removeClass('one');
+  });
 
-    // var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
-
-    // var dancerMakerFunction = window[dancerMakerFunctionName];
-
-    // var dancer = new dancerMakerFunction(
-    //   $('body').height() * Math.random(),
-    //   $('body').width() * Math.random(),
-    //   Math.random() * 1000
-    // );
-    // // console.log(dancer.$node);
-    // window.dancers.push(dancer.$node);
-    // $('body').append(dancer.$node);
+  $(document).on('mouseover', '.scardyDancer', function(event) {
+    $(this).addClass('hide');
+    $('.hide').animate({
+      left: '5',
+      top: '50'
+    }, 2000);
+    $(this).removeClass('one');
   });
 
   $(document).on('click', function(event) {
-    console.log(event.target.classlist);
+    var ele = event.target;
+    console.log(ele.classlist);
   });
 
 });

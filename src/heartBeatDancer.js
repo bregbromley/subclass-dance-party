@@ -1,14 +1,14 @@
-var makeHeartBeatDancer = function(top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps);
+var HeartBeatDancer = function(top, left, timeBetweenSteps) {
+  Dancer.call(this, top, left, timeBetweenSteps);
   // this.$node = $('<span class="dancer">♥️</span>');
   this.$node.addClass('heartBeat');
 };
 
-makeHeartBeatDancer.prototype = Object.create(makeDancer.prototype);
-makeHeartBeatDancer.prototype.constructor = makeDancer;
+HeartBeatDancer.prototype = Object.create(Dancer.prototype);
+HeartBeatDancer.prototype.constructor = HeartBeatDancer;
 
-makeHeartBeatDancer.prototype.step = function() {
+HeartBeatDancer.prototype.step = function() {
   this.$node = $('<span class="dancer"><img src="heart.png" width="35" height="35"</span>');
-  makeDancer.prototype.step.call(this);
+  Dancer.prototype.step.call(this);
 
 };

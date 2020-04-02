@@ -29,6 +29,10 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.scardyDancer{
+  border: none;
+  position: absolute;
+}
 
 .lineUpButton{
   padding:5px 12px;
@@ -41,13 +45,14 @@ body, a:link, a:visited, a:active{
   flex-wrap: wrap;
 
 }
-
+.addScardyDancerButton{
+  padding:5px 12px;
+  float:right;
+}
 
 .addSpinDancerButton{
   padding:5px 12px;
   float:right;
-
-
 }
 
 .addHeartBeatDancerButton{
